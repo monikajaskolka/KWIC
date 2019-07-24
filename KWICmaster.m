@@ -10,7 +10,8 @@ function shifts = KWICmaster(varargin)
 % in alphabetical order."
 %
 %   Inputs:
-%       varargin{1}     Char array of text, delimited with newlines.
+%       varargin{1}     Char array of text, delimited with newlines, or the filename
+%                       of a .txt file containing text delimited with newlines.
 %
 %   Outputs:
 %       shifts          Cell array of all circular shifts, ordered alphabetically.
@@ -23,7 +24,7 @@ function shifts = KWICmaster(varargin)
 %           Context, the most common format for concordance lines Key Word In
 %           ...
 %
-%       >> KWICmaster(['The Modular Structure of Complex Systems', newline, 'Software Structures: A Careful Look'])
+%       >> KWICmaster(['The Modular Structure of Complex Systems', newline, 'Software Structures: A Careful Look']);
 %           A Careful Look Software Structures:
 %           Careful Look Software Structures: A
 %           Complex Systems The Modular Structure of
@@ -31,10 +32,10 @@ function shifts = KWICmaster(varargin)
 %           ...
 
     if ~isempty(varargin)
-        % Use user input text
+        % Use user input text or filename
         text = varargin{1};
     else
-        % User example text
+        % Use example text
         text = ['KWIC is an	acronym for Key Word In Context', newline ...
             'Key Word In Context, the most	common format for concordance lines', newline ...
             'Wikipedia, The Free Encyclopedia'];
