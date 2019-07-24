@@ -1,5 +1,5 @@
-function output(list)
-% OUTPUT Print to command window.
+function outputs(list)
+% OUTPUTS Print to command window.
 %
 %   Inputs:
 %       list    Cell array of chars.
@@ -8,6 +8,6 @@ function output(list)
 %       N/A
 
    for i = 1:length(list)
-      fprintf('%s\n', list{i}); 
+      fprintf('%s\n', list{i});
    end
 end

@@ -1,5 +1,5 @@
-function lines = input(text)
-% INPUT Store input as cell array of lines.
+function lines = inputs(text)
+% INPUTS Store input as cell array of lines.
 %
 %   Inputs:
 %       text        Char array.
@@ -8,7 +8,7 @@ function lines = input(text)
 %       lines       Cell array of char arrays.
 %
 %   Example:
-%       >> lines = input(['Test text here.' newline 'More text.'])
+%       >> lines = inputs(['Test text here.' newline 'More text.'])
 %
 %       lines =
 %           1x2 cell array

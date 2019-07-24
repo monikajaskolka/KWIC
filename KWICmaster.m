@@ -40,8 +40,8 @@ function shifts = KWICmaster(varargin)
             'Wikipedia, The Free Encyclopedia'];
     end
 
-    lines = input(text);
+    lines = inputs(text);
     shifts = circularshift(lines);
     shifts = alphabetizer(shifts);
-    output(shifts);
+    outputs(shifts);
 end
